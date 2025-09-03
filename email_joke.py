@@ -34,5 +34,13 @@ waveassist.send_email(
     html_content=html.strip()
 )
 
+# Store the email content in display_output variable
+display_output = {
+    "title": "Daily Dad Joke from WaveAssist",
+    "html_content": html.strip(),
+    "status": "success"
+}
+waveassist.store_data("display_output", display_output, run_based=True)
+
 waveassist.store_data("email_sent", True)
 print("Daily dad joke email sent successfully!")
