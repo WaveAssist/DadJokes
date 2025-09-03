@@ -1,0 +1,23 @@
+name: DadJokes
+description: "Daily dad joke fetcher and email sender"
+nodes:
+  - key: fetch_joke
+    name: FetchJoke
+    file_name: fetch_joke.py
+    starting_node: true
+    schedule:
+      cron: "30 15 * * *" # Every day at 3:30 PM UTC
+      timezone: "UTC"
+  - key: email_joke
+    name: EmailJoke
+    file_name: email_joke.py
+    run_after:
+      - fetch_joke
+requirements: []
+variables:
+  - name: NoJoke
+    key: no_joke
+    value: "Ready to Run DadJokes!"
+    type: "text"
+    is_optional: true
+    helper_message: "Dad jokes are free and don't require any setup - they just work!"
