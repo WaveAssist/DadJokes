@@ -19,5 +19,5 @@ variables:
     key: no_joke
     value: "Ready to Run DadJokes!"
     type: "text"
-    is_optional: true
+    is_optional: false
     helper_message: "Dad jokes are free and don't require any setup - they just work!"
