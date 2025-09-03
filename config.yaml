@@ -16,8 +16,8 @@ nodes:
 requirements: []
 variables:
   - name: NoJoke
-    key: no_joke
+    key: no_setup_required
     value: "Ready to Run DadJokes!"
     type: "text"
-    is_optional: false
+    is_optional: true
     helper_message: "Dad jokes are free and don't require any setup - they just work!"
