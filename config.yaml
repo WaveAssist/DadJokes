@@ -18,6 +18,8 @@ variables:
   - name: schedule
     key: schedule
     type: "schedule"
-    value: "30 15 * * *"
+    value:
+      cron: "30 15 * * *"
+      timezone: "UTC"
     is_optional: False
     helper_message: "Schedule for the email joke"
