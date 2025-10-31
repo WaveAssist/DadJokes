@@ -1,5 +1,7 @@
 name: DadJokes
 description: "Daily dad joke fetcher and email sender"
+output_default_message: "Daily dad joke email sent successfully!"
+configuration_helper_message: "Configure the cron schedule for the email joke in optional variables if you need to change it."
 nodes:
   - key: fetch_joke
     name: FetchJoke
